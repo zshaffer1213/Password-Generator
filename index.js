@@ -1,59 +1,21 @@
-let homeScore = 0
-let guestScore = 0
+const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9","~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?",
+"/"];
 
-let homeScoreEl = document.getElementById("home-score")
-let homeScoreCont = document.getElementById("home-container")
+let pass1EL = document.getElementById("pass1-el")
+let pass2EL = document.getElementById("pass2-el")
 
-let guestScoreEl = document.getElementById("guest-score")
-let guestScoreCont = document.getElementById("guest-container")
-
-let playing = true
-
-function updateLead() {
-    if (homeScore > guestScore) {
-        homeScoreCont.classList.add("lead")
-        guestScoreCont.classList.remove("lead")
+function makePassword() {
+    let generatedPassword = ""
+    for (let i = 0; i < 16; i++){
+        let randInt = Math.floor(Math.random() * characters.length)
+        generatedPassword += (characters[randInt])
     }
-    else if (homeScore < guestScore) {
-        homeScoreCont.classList.remove("lead")
-        guestScoreCont.classList.add("lead")
-    }
-    else {
-        homeScoreCont.classList.remove("lead")
-        guestScoreCont.classList.remove("lead")
-    } 
+    return generatedPassword
 }
 
-function add1Home() {
-    homeScore += 1
-    homeScoreEl.textContent = homeScore
-    updateLead()
+function popPass() {
+    let firstPass = makePassword()
+    let secondPass = makePassword()
+    pass1EL.textContent = firstPass
+    pass2EL.textContent = secondPass
 }
-function add2Home() {
-    homeScore += 2
-    homeScoreEl.textContent = homeScore
-    updateLead()
-}
-function add3Home() {
-    homeScore += 3
-    homeScoreEl.textContent = homeScore
-    updateLead()
-}
-
-
-function add1Guest() {
-    guestScore += 1
-    guestScoreEl.textContent = guestScore
-    updateLead()
-}
-function add2Guest() {
-    guestScore += 2
-    guestScoreEl.textContent = guestScore
-    updateLead()
-}
-function add3Guest() {
-    guestScore += 3
-    guestScoreEl.textContent = guestScore
-    updateLead()
-}
-

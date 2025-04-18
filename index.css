@@ -1,78 +1,68 @@
-@import url('https://fonts.cdnfonts.com/css/cursed-timer-ulil');
+:root {
+    --acent-color : #10B981;
+}
 
 * {
     box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    background-color: #1B244A;
+    margin: 50px 52px 0;
+    background-color: #1F2937;
+
+}
+
+h1 {
     color: white;
+    margin-bottom: 10px;
+    
 }
 
-.container {
-    display: flex;
-    justify-content: space-around;
-    margin: 30px 50px 0;
-}
-
-h3 {
-    font-size: 40px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin: 0 0 0px;
-}
-
-.score {
-    text-align: center;
-    min-width: 155px;
-    height: 120px;
-    border-radius: 5px;
-    background-color: #080001;
+span {
+    color: var(--acent-color)
 }
 
 p {
-    font-size: 90px;
-    margin-top: 15px;
-    padding: 0;
-    font-family: 'Cursed Timer ULiL', sans-serif;
-    color: #F94F6D;
-                                                
-}
-
-.score-container {
-    padding: 25px 35px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around ;
-    gap: 10px;
-    border: 2px solid transparent;
-}
-
-.buttons {
-    margin-top: 15px;
-    display: flex;
-    gap: 10px;
+    color: #D5D4D8;
+    margin-top: 0px;
 }
 
 button {
-    width: 40px;
+    width: 200px;
+    height: 42px;
+    margin-top: 50px;
+    padding: 10px 15px;
+    background-color: #10B981;
+    border: none;
+    border-radius: 6px;
+    color: white; 
+}
+
+hr {
+    max-width: 425px;
+    border: 1px solid #2F3E53;
+    margin: 30px 0;
+}
+
+.password-box {
+    width: 200px;
     height: 40px;
-    border-radius: 5px;
-    border: 2px solid #9AABD8;
-    background-color: #1B244A;
-    color: #9AABD8;
-    font-family: 'Cursed Timer ULiL', sans-serif;
+    background-color: #273549;
+    border-radius: 6px;
+    text-align: center;
+    padding-top: 12px;
+    
 }
 
-button:hover {
-    color: #1B244A;
-    background-color: #9AABD8;
-    border-color: snow;
+.password-box p { 
+    color: #55F991;
 }
 
-.lead {
-    border: 2px solid #9AABD8;
-    border-radius: 10px;
-    box-shadow: 0px 0px 18px 4px #9AABD8;
+.password-cont {
+    max-width: 450px;
+    display: flex;
+    gap: 25px;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-items: center;
 }
